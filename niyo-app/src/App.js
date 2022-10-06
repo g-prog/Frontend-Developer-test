@@ -64,7 +64,7 @@ const ExploreBottom = styled.div`
   background: #fbaf00;
   border-radius: 0px 30px;
   z-index: 0;
-  height: 28px;
+  height: 25px;
   padding: 20px 60px;
 `;
 
@@ -76,7 +76,7 @@ const ExploreTop = styled.div`
   padding: 20px 30px;
   color: #251a00;
   position: absolute;
-  height: 20px;
+  /* height: 20px; */
 `;
 
 const Topstack = styled.div`
