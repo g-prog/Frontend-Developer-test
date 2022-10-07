@@ -94,8 +94,9 @@ const BottomStack = styled.div`
   border: 1px solid #fbaf00;
   border-radius: 0px 30px;
   z-index: 0;
+  margin-top:8px;
   padding: 20px 64px;
-  height: 25px;
+  height: 15px;
   /* width:35px; */
 `;
 
