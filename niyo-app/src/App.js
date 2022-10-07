@@ -110,10 +110,12 @@ const GreekImage = styled.div`
 `;
 
 const BodyRight = styled.div`
+  padding: 15px;
   height: 100%;
 `;
 
 const BodyLeft = styled.div`
+
   h1 {
     font-weight: 700;
     font-size: 68px;
@@ -126,7 +128,7 @@ const BodyLeft = styled.div`
 `;
 
 const TextContent = styled.div`
-  width: 55%;
+  width: 53%;
 `;
 
 const ExploreBottom = styled.div`

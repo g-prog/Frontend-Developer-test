@@ -41,7 +41,7 @@ const Container = styled.div`
 const Nav = styled.div`
   display: flex;
   justify-content: space-between;
-  padding: 30px 20px;
+  padding: 30px;
 `;
 
 const LeftNav = styled.div``;
