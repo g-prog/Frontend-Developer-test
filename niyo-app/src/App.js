@@ -58,7 +58,7 @@ const Container = styled.div`
 
 const StackContainer = styled.div`
   position: absolute;
-  top: 10%;
+  top: 5%;
   left: 60%;
 `;
 
@@ -113,14 +113,16 @@ const GreekImage = styled.div`
 `;
 
 const BodyRight = styled.div`
-  padding: 15px;
+  padding: 100px;
   height: 100%;
 `;
 
 const BodyLeft = styled.div`
+  padding: 30px 0px;
+
   h1 {
     font-weight: 700;
-    font-size: 68px;
+    font-size: 60px;
     color: #ffffff;
   }
 
@@ -156,6 +158,6 @@ const ExploreTop = styled.div`
 const ExploreArtsContent = styled.div`
   cursor: pointer;
   padding: 20px 10px;
-  width: 19%;
+  width: 23%;
   
 `;
