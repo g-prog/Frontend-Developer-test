@@ -46,7 +46,7 @@ const SearchDiv = styled.div`
   background: #1a1405;
   border-radius: 51px;
   padding: 10px 30px;
-  width: 50%;
+  width: 80%;
 
   & > input {
     background: #1a1405;
