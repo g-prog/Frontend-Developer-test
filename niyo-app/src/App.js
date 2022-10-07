@@ -153,5 +153,5 @@ const ExploreTop = styled.div`
 const ExploreArtsContent = styled.div`
   cursor: pointer;
   padding: 20px 10px;
-  width: 20%;
+  width: 23%;
 `;
