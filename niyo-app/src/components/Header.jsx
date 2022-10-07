@@ -63,8 +63,9 @@ const ExploreBottom = styled.div`
   background: #fbaf00;
   border-radius: 0px 30px;
   z-index: 0;
-  height: 27px;
+  height: 20px;
   padding: 20px 60px;
+  margin-top:8px;
 `;
 
 const ExploreTop = styled.div`

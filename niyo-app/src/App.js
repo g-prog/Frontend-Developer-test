@@ -79,13 +79,11 @@ const BackgroundDiv = styled.div`
   margin-top: 20px;
 `;
 
-
 const SpiralLogoDiv = styled.div`
   position: absolute;
   z-index: 30;
   top: 20px;
-  left:-60px;
-  
+  left: -60px;
 `;
 
 const StarDiv = styled.div`
@@ -94,14 +92,19 @@ const StarDiv = styled.div`
   left: 40%;
 `;
 
-const SpiralBottom = styled.div``;
+const SpiralBottom = styled.div`
+  img {
+    width: 450px;
+    height: 800px;
+  }
+`;
 
 const GreekImage = styled.div`
   position: absolute;
   z-index: 10;
   top: 0;
   width: 100%;
-  height:100%;
+  height: 100%;
   img {
     width: 450px;
     height: 600px;
@@ -115,7 +118,6 @@ const BodyRight = styled.div`
 `;
 
 const BodyLeft = styled.div`
-
   h1 {
     font-weight: 700;
     font-size: 68px;
@@ -135,7 +137,8 @@ const ExploreBottom = styled.div`
   background: #fbaf00;
   border-radius: 0px 30px;
   z-index: 0;
-  height: 27px;
+  height: 20px;
+  margin-top:8px;
   padding: 20px 60px;
 `;
 
@@ -153,5 +156,6 @@ const ExploreTop = styled.div`
 const ExploreArtsContent = styled.div`
   cursor: pointer;
   padding: 20px 10px;
-  width: 23%;
+  width: 19%;
+  
 `;
