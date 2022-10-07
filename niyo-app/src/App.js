@@ -2,6 +2,7 @@ import styled from "styled-components";
 import Header from "./components/Header";
 import Star from "./components/Icons/Star";
 import SpiralLogo from "./components/Icons/SpiralLogo";
+import Arts from "./components/Arts";
 
 function App() {
   return (
@@ -46,6 +47,7 @@ function App() {
           </StarDiv>
         </StarDiv>
       </Body>
+      <Arts />
     </Container>
   );
 }
