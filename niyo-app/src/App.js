@@ -1,5 +1,7 @@
 import styled from "styled-components";
 import Header from "./components/Header";
+import Star from "./components/Icons/Star";
+import SpiralLogo from "./components/Icons/SpiralLogo";
 
 function App() {
   return (
@@ -27,7 +29,22 @@ function App() {
           <SpiralBottom>
             <img src="/assets/spiral-bottom.png" alt="spiral" />
           </SpiralBottom>
+          <StackContainer>
+            <BackgroundDiv></BackgroundDiv>
+            <GreekImage>
+              <img src="/assets/greek.png" alt="greek man" />
+            </GreekImage>
+            <SpiralLogoDiv>
+              <SpiralLogo />
+            </SpiralLogoDiv>
+          </StackContainer>
         </BodyRight>
+
+        <StarDiv>
+          <StarDiv>
+            <Star />
+          </StarDiv>
+        </StarDiv>
       </Body>
     </Container>
   );
@@ -39,14 +56,62 @@ const Container = styled.div`
   color: white;
 `;
 
+const StackContainer = styled.div`
+  position: absolute;
+  top: 10%;
+  left: 60%;
+`;
+
 const Body = styled.div`
   display: flex;
   justify-content: space-around;
+  padding: 10px 40px;
+  position: relative;
+`;
+
+const BackgroundDiv = styled.div`
+  background: #fbaf00;
+  border-radius: 20px 200px;
+  width: 420px;
+  height: 570px;
+  padding: 20px 30px;
+  z-index: 0;
+  margin-top: 20px;
+`;
+
+
+const SpiralLogoDiv = styled.div`
+  position: absolute;
+  z-index: 30;
+  top: 20px;
+  left:-60px;
+  
+`;
+
+const StarDiv = styled.div`
+  position: absolute;
+  top: 70%;
+  left: 40%;
 `;
 
 const SpiralBottom = styled.div``;
 
-const BodyRight = styled.div``;
+const GreekImage = styled.div`
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  width: 100%;
+  height:100%;
+  img {
+    width: 450px;
+    height: 600px;
+    border-radius: 20px 200px;
+  }
+`;
+
+const BodyRight = styled.div`
+  height: 100%;
+`;
 
 const BodyLeft = styled.div`
   h1 {
@@ -61,9 +126,8 @@ const BodyLeft = styled.div`
 `;
 
 const TextContent = styled.div`
-  width: 45%;
+  width: 55%;
 `;
-
 
 const ExploreBottom = styled.div`
   background: #fbaf00;
@@ -89,5 +153,3 @@ const ExploreArtsContent = styled.div`
   padding: 20px 10px;
   width: 20%;
 `;
-
-
