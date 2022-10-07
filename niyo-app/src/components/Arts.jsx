@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import SearchIcon from "./Icons/SearchIcon";
+import Cards from "./Cards";
+
 function Arts() {
   return (
     <Container>
@@ -10,7 +12,7 @@ function Arts() {
           <Content>
             <p>
               Browse a curated selection of art around the world, including
-              museum exhibitions, gallery openings, upcoming and many more
+              museum exhibitions, gallery openings, upcoming and many more.
             </p>
           </Content>
         </TopLeft>
@@ -19,19 +21,45 @@ function Arts() {
             <Div>
               <SearchIcon />
             </Div>
-
             <input type="text" placeholder="Search" />
           </SearchDiv>
         </TopRight>
       </Top>
+      <ArtsBody>
+        <CardsDiv>
+          <Cards src="/assets/greek.png" />
+        </CardsDiv>
+        <CardsDiv>
+          <Cards src="/assets/greek.png" />
+        </CardsDiv>
+        <CardsDiv>
+          <Cards src="/assets/greek.png" />
+        </CardsDiv>
+        <CardsDiv>
+          <Cards src="/assets/greek.png" />
+        </CardsDiv>
+        <CardsDiv>
+          <Cards src="/assets/greek.png" />
+        </CardsDiv>
+        <CardsDiv>
+          <Cards src="/assets/greek.png" />
+        </CardsDiv>
+      </ArtsBody>
     </Container>
   );
 }
 
 export default Arts;
 
-const Container = styled.div`
-  color: white;
+const Container = styled.div``;
+
+const CardsDiv = styled.div``;
+
+const ArtsBody = styled.div`
+  display: flex;
+  gap: 50px;
+  padding: 30px 20px;
+  flex-wrap: wrap;
 `;
 
 const Top = styled.div`

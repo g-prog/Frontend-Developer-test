@@ -11,12 +11,12 @@ function App() {
       <Body>
         <BodyLeft>
           <h1>
-            Discover amazing <br /> art around the <span>world</span>{" "}
+            Discover amazing <br /> art around the <span>world.</span>{" "}
           </h1>
           <TextContent>
             <p>
               Browse a curated selection of art around the world, including
-              museum exhibitions, gallery openings, upcoming and many more
+              museum exhibitions, gallery openings, upcoming and many more.
             </p>
           </TextContent>
 
