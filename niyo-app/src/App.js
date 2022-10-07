@@ -88,8 +88,8 @@ const SpiralLogoDiv = styled.div`
 
 const StarDiv = styled.div`
   position: absolute;
-  top: 70%;
-  left: 40%;
+  top: 50%;
+  left: 38%;
 `;
 
 const SpiralBottom = styled.div`
