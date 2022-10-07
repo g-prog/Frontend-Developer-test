@@ -87,7 +87,7 @@ const ExploreTop = styled.div`
 const ExploreArtsContent = styled.div`
   cursor: pointer;
   padding: 20px 10px;
-  width: 25%;
+  width: 20%;
 `;
 
 
