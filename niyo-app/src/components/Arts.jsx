@@ -41,14 +41,10 @@ function Arts() {
   const searchArts = (e) => {
     e.preventDefault();
 
-    // const apiInfo = {
-    //   // headers: {
-    //   //   'Content-Type: application/json'
-    //   // },
-    // };
-
     axios
-      .get(`https://api.artic.edu/api/v1/artworks/search?q=${userInput}&fields=id,title,image_id,`)
+      .get(
+        `https://api.artic.edu/api/v1/artworks/search?q=${userInput}&fields=id,title,image_id`
+      )
       .then(
         (response) => {
           console.log(response);
@@ -167,7 +163,6 @@ const SearchDiv = styled.div`
     border: none;
     outline: none;
     color: #fbaf00;
-
 
     &::placeholder {
       color: #fbaf00;
