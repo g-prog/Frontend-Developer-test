@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-function Cards({ src, title, date }) {
+function Cards({ src, title, date , location}) {
   return (
     <Container>
       <ImageContainer>
@@ -10,6 +10,7 @@ function Cards({ src, title, date }) {
       <InfoDiv>
         <h3> {title}</h3>
         <p> {date}</p>
+        <> {location}</>
       </InfoDiv>
     </Container>
   );
@@ -25,10 +26,11 @@ const InfoDiv = styled.div`
   background: #1a1405;
   border-radius: 0px 0px 180px 0px;
   /* transform: matrix(-1, 0, 0, 1, 0, 0); */
-  width: 340px;
+  width: 343px;
   height: 150px;
-  padding: 20px 30px;
+  padding: 24px 30px;
   margin-top: -20px;
+  font-size: 14px;
 `;
 
 const ImageContainer = styled.div`

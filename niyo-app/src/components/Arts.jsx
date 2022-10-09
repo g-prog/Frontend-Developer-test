@@ -20,7 +20,7 @@ function Arts() {
     setLoading(true);
     axios
       .get(
-        "https://api.artic.edu/api/v1/artworks?&fields=id,title,image_id,artist_display,date_display"
+        "https://api.artic.edu/api/v1/artworks?&fields=id,title,image_id,artist_display,date_display,department_title"
       )
       .then((response) => {
         console.log(response);
@@ -66,6 +66,7 @@ function Arts() {
                 }/${`full/843,/0/default.jpg`}`}
                 title={item?.title}
                 date={item?.date_display}
+                location={item?.department_title}
               />
             </CardsDiv>
           ))}
