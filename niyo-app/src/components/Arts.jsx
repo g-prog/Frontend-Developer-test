@@ -49,8 +49,6 @@ function Arts() {
         (response) => {
           console.log(response);
           setSearchResult(response?.data?.data);
-
-          // console.log(data?.data?.users);
         },
         (error) => {
           console.log(error);
