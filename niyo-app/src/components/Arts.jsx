@@ -48,7 +48,7 @@ function Arts() {
     // };
 
     axios
-      .get(`https://api.artic.edu/api/v1/artworks/search?q=${userInput}`)
+      .get(`https://api.artic.edu/api/v1/artworks/search?q=${userInput}&fields=id,title,image_id,`)
       .then(
         (response) => {
           console.log(response);
