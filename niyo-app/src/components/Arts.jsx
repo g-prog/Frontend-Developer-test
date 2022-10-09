@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import SearchIcon from "./Icons/SearchIcon";
 import Cards from "./Cards";
@@ -7,15 +7,31 @@ import axios from "axios";
 function Arts() {
   const [arts, setArts] = useState([]);
   const [baseUrl, setbaseUrl] = useState("");
-  axios
-    .get("https://api.artic.edu/api/v1/artworks?&fields=id,title,image_id")
-    .then((response) => {
-      console.log(response);
-      setbaseUrl(response?.data?.config?.iiif_url);
-      setArts(response?.data?.data);
-    });
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(false);
 
   // console.log(baseUrl);
+
+  axios.get("https://api.artic.edu/api/v1/artworks").then((response) => {
+    console.log(response);
+  });
+
+  useEffect(() => {
+    setLoading(true);
+    axios
+      .get(
+        "https://api.artic.edu/api/v1/artworks?&fields=id,title,image_id,artist_display,date_display"
+      )
+      .then((response) => {
+        console.log(response);
+        setbaseUrl(response?.data?.config?.iiif_url);
+        setArts(response?.data?.data);
+        setLoading(false);
+      }, (error) => {
+        console.log(error);
+        setError(error.message);
+      });
+  }, []);
 
   return (
     <Container>
@@ -38,16 +54,23 @@ function Arts() {
           </SearchDiv>
         </TopRight>
       </Top>
-      <ArtsBody>
-        {arts.map((item) => (
-          <CardsDiv key={item.id}>
-            <Cards
-              src={`${baseUrl}/${item?.image_id}/${`full/843,/0/default.jpg`}`}
-              title={item?.title}
-            />
-          </CardsDiv>
-        ))}
-      </ArtsBody>
+      {loading && !error ? (
+        <LoadingDiv>Loading...</LoadingDiv>
+      ) : (
+        <ArtsBody>
+          {arts.map((item) => (
+            <CardsDiv key={item.id}>
+              <Cards
+                src={`${baseUrl}/${
+                  item?.image_id
+                }/${`full/843,/0/default.jpg`}`}
+                title={item?.title}
+                date={item?.date_display}
+              />
+            </CardsDiv>
+          ))}
+        </ArtsBody>
+      )}
     </Container>
   );
 }
@@ -57,6 +80,13 @@ export default Arts;
 const Container = styled.div``;
 
 const CardsDiv = styled.div``;
+
+const LoadingDiv = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+`;
 
 const ArtsBody = styled.div`
   display: flex;
