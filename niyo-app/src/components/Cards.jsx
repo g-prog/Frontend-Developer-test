@@ -2,14 +2,14 @@ import React from "react";
 import styled from "styled-components";
 
 function Cards({ src, title }) {
+  console.log(src)
   return (
     <Container>
       <ImageContainer>
         <img src={src} alt={title} />
       </ImageContainer>
       <InfoDiv>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa tempore
-        vel laborum veritatis vitae iure, reprehenderit aliquam quasi? Adipisci
+        {title}
       </InfoDiv>
     </Container>
   );
