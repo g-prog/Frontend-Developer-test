@@ -6,29 +6,16 @@ import axios from "axios";
 
 function Arts() {
   const [arts, setArts] = useState([]);
-  const [baseUrl, setbaseUrl] = useState("")
-  // axios
-  //   .get(
-  //     "https://api.artic.edu/api/v1/artworks?fields=id,title,artist_display,date_display,main_reference_number,thumbnail"
-  //   )
-  //   .then((response) => {
-  //     console.log(response);
-  //     setArts(response?.data?.data);
-  //   });
-
-
-    axios
-    .get(
-      "https://api.artic.edu/api/v1/artworks?&fields=id,title,image_id"
-    )
+  const [baseUrl, setbaseUrl] = useState("");
+  axios
+    .get("https://api.artic.edu/api/v1/artworks?&fields=id,title,image_id")
     .then((response) => {
       console.log(response);
-      setbaseUrl(response?.data?.config?.iiif_url)
+      setbaseUrl(response?.data?.config?.iiif_url);
       setArts(response?.data?.data);
     });
 
   // console.log(baseUrl);
-
 
   return (
     <Container>
@@ -54,7 +41,10 @@ function Arts() {
       <ArtsBody>
         {arts.map((item) => (
           <CardsDiv key={item.id}>
-            <Cards src={`${baseUrl}/${item?.image_id}/${`full/843,/0/default.jpg`}`} title={item?.title} />
+            <Cards
+              src={`${baseUrl}/${item?.image_id}/${`full/843,/0/default.jpg`}`}
+              title={item?.title}
+            />
           </CardsDiv>
         ))}
       </ArtsBody>
