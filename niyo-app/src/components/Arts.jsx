@@ -9,12 +9,14 @@ function Arts() {
   const [baseUrl, setbaseUrl] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
+  const [userInput, setUserInput] = useState("");
+  const [searchResult, setSearchResult] = useState([]);
 
   // console.log(baseUrl);
 
-  axios.get("https://api.artic.edu/api/v1/artworks").then((response) => {
-    console.log(response);
-  });
+  // axios.get("https://api.artic.edu/api/v1/artworks").then((response) => {
+  //   console.log(response);
+  // });
 
   useEffect(() => {
     setLoading(true);
@@ -22,16 +24,43 @@ function Arts() {
       .get(
         "https://api.artic.edu/api/v1/artworks?&fields=id,title,image_id,artist_display,date_display,department_title"
       )
-      .then((response) => {
-        console.log(response);
-        setbaseUrl(response?.data?.config?.iiif_url);
-        setArts(response?.data?.data);
-        setLoading(false);
-      }, (error) => {
-        console.log(error);
-        setError(error.message);
-      });
+      .then(
+        (response) => {
+          console.log(response);
+          setbaseUrl(response?.data?.config?.iiif_url);
+          setArts(response?.data?.data);
+          setLoading(false);
+        },
+        (error) => {
+          console.log(error);
+          setError(error.message);
+        }
+      );
   }, []);
+
+  const searchArts = (e) => {
+    e.preventDefault();
+
+    // const apiInfo = {
+    //   // headers: {
+    //   //   'Content-Type: application/json'
+    //   // },
+    // };
+
+    axios
+      .get(`https://api.artic.edu/api/v1/artworks/search?q=${userInput}`)
+      .then(
+        (response) => {
+          console.log(response);
+          setSearchResult(response?.data?.data);
+
+          // console.log(data?.data?.users);
+        },
+        (error) => {
+          console.log(error);
+        }
+      );
+  };
 
   return (
     <Container>
@@ -47,18 +76,20 @@ function Arts() {
         </TopLeft>
         <TopRight>
           <SearchDiv>
-            <Div>
+            <Div onClick={searchArts}>
               <SearchIcon />
             </Div>
-            <input type="text" placeholder="Search" />
+            <input
+              type="text"
+              placeholder="Search"
+              onChange={(e) => setUserInput(e.target.value)}
+            />
           </SearchDiv>
         </TopRight>
       </Top>
-      {loading && !error ? (
-        <LoadingDiv>Loading...</LoadingDiv>
-      ) : (
+      {searchResult.length > 0 ? (
         <ArtsBody>
-          {arts.map((item) => (
+          {searchResult.map((item) => (
             <CardsDiv key={item.id}>
               <Cards
                 src={`${baseUrl}/${
@@ -71,6 +102,27 @@ function Arts() {
             </CardsDiv>
           ))}
         </ArtsBody>
+      ) : (
+        <>
+          {loading && !error ? (
+            <LoadingDiv>Loading...</LoadingDiv>
+          ) : (
+            <ArtsBody>
+              {arts.map((item) => (
+                <CardsDiv key={item.id}>
+                  <Cards
+                    src={`${baseUrl}/${
+                      item?.image_id
+                    }/${`full/843,/0/default.jpg`}`}
+                    title={item?.title}
+                    date={item?.date_display}
+                    location={item?.department_title}
+                  />
+                </CardsDiv>
+              ))}
+            </ArtsBody>
+          )}
+        </>
       )}
     </Container>
   );
@@ -114,6 +166,8 @@ const SearchDiv = styled.div`
     background: #1a1405;
     border: none;
     outline: none;
+    color: #fbaf00;
+
 
     &::placeholder {
       color: #fbaf00;
