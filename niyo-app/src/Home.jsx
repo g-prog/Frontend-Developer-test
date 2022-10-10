@@ -123,6 +123,10 @@ const StarDiv = styled.div`
   position: absolute;
   top: 50%;
   left: 38%;
+
+  @media (max-width: 600px) {
+    display: none;
+  }
 `;
 
 const SpiralBottom = styled.div`
@@ -148,6 +152,10 @@ const GreekImage = styled.div`
 const BodyRight = styled.div`
   padding: 100px;
   height: 100%;
+
+  @media (max-width: 600px) {
+    display: none;
+  }
 `;
 
 const BodyLeft = styled.div`
@@ -157,6 +165,11 @@ const BodyLeft = styled.div`
     font-weight: 700;
     font-size: 60px;
     color: #ffffff;
+
+    @media (max-width: 600px) {
+      font-weight: 700;
+      font-size: 20px;
+    }
   }
 
   span {

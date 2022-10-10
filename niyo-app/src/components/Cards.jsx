@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-function Cards({ src, title, date , location}) {
+function Cards({ src, title, date, location }) {
   return (
     <Container>
       <ImageContainer>
@@ -31,6 +31,11 @@ const InfoDiv = styled.div`
   padding: 24px 30px;
   margin-top: -20px;
   font-size: 14px;
+
+  @media (max-width: 600px) {
+    width: 150px;
+    height: 100px;
+  }
 `;
 
 const ImageContainer = styled.div`
@@ -41,5 +46,10 @@ const ImageContainer = styled.div`
     width: 400px;
     height: 300px;
     border-radius: 0px 180px 0px 0px;
+
+    @media (max-width: 600px) {
+      width: 150px;
+      height: 100px;
+    }
   }
 `;
