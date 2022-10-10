@@ -62,8 +62,17 @@ const ArtDetails = () => {
               />
             </ImageContainer>
             <InfoDiv>
-              <h1>{artDetails?.artist_title}</h1>
-              <p>{artDetails?.credit_line}</p>
+              <InfoTop>
+                <h1>{artDetails?.artist_title}</h1>
+                <p>{artDetails?.credit_line}</p>
+              </InfoTop>
+              <ButtonDiv>
+                <ExploreArtsContent>
+                  <ExploreTop>Explore Arts</ExploreTop>
+                  <ExploreBottom>Hello</ExploreBottom>
+                </ExploreArtsContent>
+                <ExploreButton>Explore Arts</ExploreButton>
+              </ButtonDiv>
             </InfoDiv>
           </FlexDiv>
         )}
@@ -78,6 +87,55 @@ export default ArtDetails;
 const Container = styled.div``;
 
 const InfoDiv = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+`;
+
+const ExploreButton = styled.button`
+  font-size: 20px;
+  background: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: #ffffff;
+`;
+
+const ExploreBottom = styled.div`
+  background: #fbaf00;
+  border-radius: 0px 30px;
+  z-index: 0;
+  height: 20px;
+  margin-top: 8px;
+  padding: 20px 65px;
+  width: 30%;
+`;
+
+const ExploreTop = styled.div`
+  display: flex;
+  gap: 10px;
+  background: white;
+  border: 1px solid #fbaf00;
+  border-radius: 0px 30px;
+  z-index: 10;
+  padding: 20px 30px;
+  color: #251a00;
+  position: absolute;
+  /* height: 20px; */
+`;
+
+const ExploreArtsContent = styled.div`
+  cursor: pointer;
+  padding: 20px 10px;
+  width: 30%;
+`;
+
+const ButtonDiv = styled.div`
+  display: flex;
+  justify-content: space-between;
+`;
+
+const InfoTop = styled.div`
   p {
     margin-top: 20px;
   }
