@@ -1,12 +1,119 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { useParams } from "react-router-dom";
+import Header from "./components/Header";
+import BackArrow from "./components/Icons/BackArrow";
+import ShareIcon from "./components/Icons/ShareIcon";
+import axios from "axios";
+import { Link } from "react-router-dom";
 
 const ArtDetails = () => {
+  const [artDetails, setArtDetails] = useState({});
+  const [baseUrl, setbaseUrl] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(false);
+
   const { id } = useParams();
-  return <Container>ArtDetails-{id}</Container>;
+
+  useEffect(() => {
+    setLoading(true);
+    axios.get(`https://api.artic.edu/api/v1/artworks/${id}`).then(
+      (response) => {
+        console.log(response);
+        setArtDetails(response?.data?.data);
+        setbaseUrl(response?.data?.config?.iiif_url);
+        setLoading(false);
+      },
+      (error) => {
+        console.log(error);
+        setError(error);
+      }
+    );
+  }, [id]);
+  console.log(artDetails);
+  console.log(artDetails?.artist_title);
+  return (
+    <Container>
+      <Header />
+      <Top>
+        <Div>
+          <Link to="/">
+            <BackArrow />
+          </Link>
+        </Div>
+
+        <Div>
+          <ShareIcon />
+        </Div>
+      </Top>
+      <Body>
+        {loading && !error ? (
+          <LoadingDiv>Loading...</LoadingDiv>
+        ) : error ? (
+          <LoadingDiv>An error occurred.</LoadingDiv>
+        ) : (
+          <FlexDiv>
+            <ImageContainer>
+              <img
+                src={`${baseUrl}/${
+                  artDetails?.image_id
+                }/${`full/843,/0/default.jpg`}`}
+                alt="art details"
+              />
+            </ImageContainer>
+            <InfoDiv>
+              <h1>{artDetails?.artist_title}</h1>
+              <p>{artDetails?.credit_line}</p>
+            </InfoDiv>
+          </FlexDiv>
+        )}
+      </Body>
+      {/* ArtDetails-{id} */}
+    </Container>
+  );
 };
 
 export default ArtDetails;
 
 const Container = styled.div``;
+
+const InfoDiv = styled.div`
+  p {
+    margin-top: 20px;
+  }
+`;
+
+const FlexDiv = styled.div`
+  display: flex;
+  gap: 40px;
+`;
+
+const ImageContainer = styled.div`
+  img {
+    width: 480px;
+    height: 600px;
+    border-radius: 20px 200px;
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+  }
+`;
+
+const LoadingDiv = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+`;
+
+const Top = styled.div`
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 60px;
+`;
+
+const Div = styled.div`
+  cursor: pointer;
+`;
+
+const Body = styled.div`
+  padding: 20px 90px;
+`;

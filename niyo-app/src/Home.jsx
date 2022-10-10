@@ -3,6 +3,7 @@ import Header from "./components/Header";
 import Star from "./components/Icons/Star";
 import SpiralLogo from "./components/Icons/SpiralLogo";
 import Arts from "./components/Arts";
+import ArrowIcon from "./components/Icons/ArrowIcon";
 
 function Home() {
   return (
@@ -48,14 +49,44 @@ function Home() {
         </StarDiv>
       </Body>
       <Arts />
+      <Footer>
+        <FooterImage>
+          <img src="/assets/footer-spiral.png" alt="footer" />
+        </FooterImage>
+        <ExploreDiv>
+          <ExploreArtsContent>
+            <ExploreTopFooter>
+              Explore Arts
+              <ArrowIcon />
+            </ExploreTopFooter>
+            <ExploreBottomFooter></ExploreBottomFooter>
+          </ExploreArtsContent>
+        </ExploreDiv>
+      </Footer>
     </Container>
   );
 }
 
 export default Home;
 
-const Container = styled.div`
-  color: white;
+const Container = styled.div``;
+
+const Footer = styled.footer`
+  display: flex;
+  gap: 5px;
+  position: relative;
+`;
+
+const FooterImage = styled.div``;
+
+const ExploreDiv = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  position: absolute;
+  left: 20%;
+  top: 75%;
 `;
 
 const StackContainer = styled.div`
@@ -142,11 +173,36 @@ const ExploreBottom = styled.div`
   border-radius: 0px 30px;
   z-index: 0;
   height: 20px;
-  margin-top:8px;
+  margin-top: 8px;
   padding: 20px 60px;
 `;
 
 const ExploreTop = styled.div`
+  display: flex;
+  gap: 10px;
+  background: white;
+  border: 1px solid #fbaf00;
+  border-radius: 0px 30px;
+  z-index: 10;
+  padding: 20px 30px;
+  color: #251a00;
+  position: absolute;
+  /* height: 20px; */
+`;
+
+const ExploreBottomFooter = styled.div`
+  background: #fbaf00;
+  border-radius: 0px 30px;
+  z-index: 0;
+  height: 20px;
+  margin-top: 8px;
+  width: 40%;
+  padding: 20px 65px;
+`;
+
+const ExploreTopFooter = styled.div`
+  display: flex;
+  gap: 10px;
   background: white;
   border: 1px solid #fbaf00;
   border-radius: 0px 30px;
@@ -161,5 +217,4 @@ const ExploreArtsContent = styled.div`
   cursor: pointer;
   padding: 20px 10px;
   width: 23%;
-  
 `;

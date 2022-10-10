@@ -101,6 +101,8 @@ function Arts() {
         <>
           {loading && !error ? (
             <LoadingDiv>Loading...</LoadingDiv>
+          ) : error ? (
+            <LoadingDiv>An error occured.</LoadingDiv>
           ) : (
             <ArtsBody>
               {arts.map((item) => (
