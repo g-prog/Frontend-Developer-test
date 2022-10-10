@@ -85,16 +85,18 @@ function Arts() {
       {searchResult.length > 0 ? (
         <ArtsBody>
           {searchResult.map((item) => (
-            <CardsDiv key={item.id}>
-              <Cards
-                src={`${baseUrl}/${
-                  item?.image_id
-                }/${`full/843,/0/default.jpg`}`}
-                title={item?.title}
-                date={item?.date_display}
-                location={item?.department_title}
-              />
-            </CardsDiv>
+            <Link to={`/arts/${item.id}`}>
+              <CardsDiv key={item.id}>
+                <Cards
+                  src={`${baseUrl}/${
+                    item?.image_id
+                  }/${`full/843,/0/default.jpg`}`}
+                  title={item?.title}
+                  date={item?.date_display}
+                  location={item?.department_title}
+                />
+              </CardsDiv>
+            </Link>
           ))}
         </ArtsBody>
       ) : (
