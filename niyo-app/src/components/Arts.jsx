@@ -9,6 +9,8 @@ function Arts() {
   const [arts, setArts] = useState([]);
   const [baseUrl, setbaseUrl] = useState("");
   const [loading, setLoading] = useState(false);
+  const [loadingSearch, setLoadingSearch] = useState(false);
+  const [errorSearch, setErrorSearch] = useState(false);
   const [error, setError] = useState(false);
   const [userInput, setUserInput] = useState("");
   const [searchResult, setSearchResult] = useState([]);
@@ -40,6 +42,7 @@ function Arts() {
   }, []);
 
   const searchArts = (e) => {
+    setLoadingSearch(true);
     e.preventDefault();
 
     axios
@@ -50,9 +53,11 @@ function Arts() {
         (response) => {
           console.log(response);
           setSearchResult(response?.data?.data);
+          setLoadingSearch(false);
         },
         (error) => {
           console.log(error);
+          setErrorSearch(error);
         }
       );
   };
@@ -82,23 +87,33 @@ function Arts() {
           </SearchDiv>
         </TopRight>
       </Top>
+
       {searchResult.length > 0 ? (
-        <ArtsBody>
-          {searchResult.map((item) => (
-            <Link to={`/arts/${item.id}`}>
-              <CardsDiv key={item.id}>
-                <Cards
-                  src={`${baseUrl}/${
-                    item?.image_id
-                  }/${`full/843,/0/default.jpg`}`}
-                  title={item?.title}
-                  date={item?.date_display}
-                  location={item?.department_title}
-                />
-              </CardsDiv>
-            </Link>
-          ))}
-        </ArtsBody>
+        <>
+          {" "}
+          {loadingSearch && !error ? (
+            <LoadingDiv>Fetching results, please wait...</LoadingDiv>
+          ) : errorSearch ? (
+            <LoadingDiv>An error occurred...</LoadingDiv>
+          ) : (
+            <ArtsBody>
+              {searchResult.map((item) => (
+                <Link to={`/arts/${item.id}`}>
+                  <CardsDiv key={item.id}>
+                    <Cards
+                      src={`${baseUrl}/${
+                        item?.image_id
+                      }/${`full/843,/0/default.jpg`}`}
+                      title={item?.title}
+                      date={item?.date_display}
+                      location={item?.department_title}
+                    />
+                  </CardsDiv>
+                </Link>
+              ))}
+            </ArtsBody>
+          )}
+        </>
       ) : (
         <>
           {loading && !error ? (
