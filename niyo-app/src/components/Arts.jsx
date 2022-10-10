@@ -3,6 +3,7 @@ import styled from "styled-components";
 import SearchIcon from "./Icons/SearchIcon";
 import Cards from "./Cards";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 function Arts() {
   const [arts, setArts] = useState([]);
@@ -43,7 +44,7 @@ function Arts() {
 
     axios
       .get(
-        `https://api.artic.edu/api/v1/artworks/search?q=${userInput}&fields=id,title,image_id`
+        `https://api.artic.edu/api/v1/artworks/search?q=${userInput}&fields=id,title,image_id,artist_display,date_display,department_title`
       )
       .then(
         (response) => {
@@ -103,16 +104,18 @@ function Arts() {
           ) : (
             <ArtsBody>
               {arts.map((item) => (
-                <CardsDiv key={item.id}>
-                  <Cards
-                    src={`${baseUrl}/${
-                      item?.image_id
-                    }/${`full/843,/0/default.jpg`}`}
-                    title={item?.title}
-                    date={item?.date_display}
-                    location={item?.department_title}
-                  />
-                </CardsDiv>
+                <Link to={`/arts/${item.id}`}>
+                  <CardsDiv key={item.id}>
+                    <Cards
+                      src={`${baseUrl}/${
+                        item?.image_id
+                      }/${`full/843,/0/default.jpg`}`}
+                      title={item?.title}
+                      date={item?.date_display}
+                      location={item?.department_title}
+                    />
+                  </CardsDiv>
+                </Link>
               ))}
             </ArtsBody>
           )}
@@ -140,6 +143,11 @@ const ArtsBody = styled.div`
   gap: 50px;
   padding: 30px 20px;
   flex-wrap: wrap;
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
 `;
 
 const Top = styled.div`
