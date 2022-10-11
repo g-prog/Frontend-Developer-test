@@ -246,7 +246,7 @@ const TopLeft = styled.div`
     color: #ffffff;
 
     @media (max-width: 600px) {
-      font-weight: 400;
+      font-weight: 700;
       font-size: 28px;
     }
   }
