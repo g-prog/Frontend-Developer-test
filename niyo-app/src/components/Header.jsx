@@ -122,11 +122,11 @@ const MobileNav = styled.div`
     justify-content: center;
     background: #fbaf00;
     position: absolute;
-    top: 0;
-    height: 100vh;
+    top: 50px;
+    height: 700px;
     z-index: 20;
-    width: 600px;
-    left: 0;
+    width: 200px;
+    right: 0;
   }
 `;
 
