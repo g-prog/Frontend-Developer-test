@@ -116,6 +116,10 @@ const Body = styled.div`
   justify-content: space-around;
   padding: 10px 40px;
   position: relative;
+
+  @media (max-width: 600px) {
+    padding: 10px;
+  }
 `;
 
 const BackgroundDiv = styled.div`
