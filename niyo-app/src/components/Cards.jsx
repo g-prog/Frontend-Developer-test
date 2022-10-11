@@ -33,8 +33,8 @@ const InfoDiv = styled.div`
   font-size: 14px;
 
   @media (max-width: 600px) {
-    width: 150px;
-    height: 100px;
+    width: 300px;
+    height: 200px;
   }
 `;
 
@@ -48,8 +48,8 @@ const ImageContainer = styled.div`
     border-radius: 0px 180px 0px 0px;
 
     @media (max-width: 600px) {
-      width: 150px;
-      height: 100px;
+      width: 360px;
+      height: 200px;
     }
   }
 `;
