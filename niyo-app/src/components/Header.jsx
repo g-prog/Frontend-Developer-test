@@ -1,7 +1,28 @@
+import { useEffect } from "react";
 import React from "react";
 import styled from "styled-components";
 
-export default function Header() {
+export default function Header({
+  menuOpen,
+  setMenuOpen,
+  screenWidth,
+  setscreenWidth,
+}) {
+  useEffect(() => {
+    const changeWidth = () => {
+      setscreenWidth(window.innerWidth);
+    };
+
+    window.addEventListener("resize", changeWidth);
+
+    return () => {
+      window.removeEventListener("resize", changeWidth);
+    };
+  }, []);
+
+  const toggleDiv = () => {
+    setMenuOpen(!menuOpen);
+  };
   return (
     <Container>
       <Nav>
@@ -11,7 +32,7 @@ export default function Header() {
           </ImageContainer>
         </LeftNav>
 
-        <HamburgerDiv>
+        <HamburgerDiv onClick={toggleDiv}>
           <img src="/assets/hamburger.png" alt="hamburger" />
         </HamburgerDiv>
         <RightNav>
@@ -33,26 +54,31 @@ export default function Header() {
             </ExploreArts>
           </ButtonDiv>
         </RightNav>
+        {screenWidth <= 600 && (
+          <>
+            {menuOpen && (
+              <MobileNav>
+                <ul>
+                  <li>Events</li>
+                  <li>Museum</li>
+                  <li>Arts</li>
+                  <li>Galleries</li>
+                </ul>
+                <ButtonDiv>
+                  <LoginButton>
+                    <Topstack>Login</Topstack>
+                    <BottomStack>hello</BottomStack>
+                  </LoginButton>
 
-        <MobileNav>
-          <ul>
-            <li>Events</li>
-            <li>Museum</li>
-            <li>Arts</li>
-            <li>Galleries</li>
-          </ul>
-          <ButtonDiv>
-            <LoginButton>
-              <Topstack>Login</Topstack>
-              <BottomStack>hello</BottomStack>
-            </LoginButton>
-
-            <ExploreArts>
-              <ExploreTop>Explore Arts</ExploreTop>
-              <ExploreBottom>Hello</ExploreBottom>
-            </ExploreArts>
-          </ButtonDiv>
-        </MobileNav>
+                  <ExploreArts>
+                    <ExploreTop>Explore Arts</ExploreTop>
+                    <ExploreBottom>Hello</ExploreBottom>
+                  </ExploreArts>
+                </ButtonDiv>
+              </MobileNav>
+            )}
+          </>
+        )}
       </Nav>
     </Container>
   );
@@ -60,6 +86,9 @@ export default function Header() {
 
 const Container = styled.div`
   color: white;
+  @media (max-width: 600px) {
+    position: relative;
+  }
 `;
 
 const HamburgerDiv = styled.div`
@@ -74,10 +103,16 @@ const HamburgerDiv = styled.div`
 `;
 
 const MobileNav = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  background: black;
+  display: none;
+  @media (max-width: 600px) {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background: #fbaf00;
+    position: absolute;
+    top: 0;
+    height: 100vh;
+  }
 `;
 
 const Nav = styled.div`

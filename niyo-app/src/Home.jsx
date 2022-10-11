@@ -1,3 +1,4 @@
+import { useState } from "react";
 import styled from "styled-components";
 import Header from "./components/Header";
 import Star from "./components/Icons/Star";
@@ -6,9 +7,16 @@ import Arts from "./components/Arts";
 import ArrowIcon from "./components/Icons/ArrowIcon";
 
 function Home() {
+  const [openMenu, setopenMenu] = useState(false);
+  const [screenWidth, setscreenWidth] = useState(0);
   return (
     <Container>
-      <Header />
+      <Header
+        menuOpen={openMenu}
+        setMenuOpen={setopenMenu}
+        screenWidth={screenWidth}
+        setscreenWidth={setscreenWidth}
+      />
       <Body>
         <BodyLeft>
           <h1>
