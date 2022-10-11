@@ -168,7 +168,7 @@ const ArtsBody = styled.div`
     color: inherit;
   }
 
-  @media (max-width: 400px) {
+  @media (max-width: 900px) {
     align-items: center;
     justify-content: center;
     padding: 10px 30px;
@@ -180,7 +180,7 @@ const Top = styled.div`
   justify-content: space-between;
   padding: 10px 25px;
 
-  @media (max-width: 600px) {
+  @media (max-width: 900px) {
     flex-direction: column;
   }
 `;
@@ -206,7 +206,7 @@ const SearchDiv = styled.div`
     }
   }
 
-  @media (max-width: 600px) {
+  @media (max-width: 768px) {
     width: 100%;
   }
 `;
@@ -225,6 +225,11 @@ const Content = styled.div`
   @media (max-width: 600px) {
     width: 100%;
     margin-top: 30px;
+  }
+
+  @media (max-width: 900px) {
+    width: 100%;
+    /* margin-top: 30px; */
   }
 `;
 

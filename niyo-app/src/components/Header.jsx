@@ -54,7 +54,7 @@ export default function Header({
             </ExploreArts>
           </ButtonDiv>
         </RightNav>
-        {screenWidth <= 600 && (
+        {screenWidth <= 768 && (
           <>
             {menuOpen && (
               <MobileNav>
@@ -98,7 +98,7 @@ const Container = styled.div`
 
 const HamburgerDiv = styled.div`
   display: none;
-  @media (max-width: 600px) {
+  @media (max-width: 768px) {
     display: flex;
   }
   img {
@@ -109,7 +109,7 @@ const HamburgerDiv = styled.div`
 
 const MobileNav = styled.div`
   display: none;
-  @media (max-width: 600px) {
+  @media (max-width: 768px) {
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -198,7 +198,7 @@ const RightNav = styled.div`
   display: flex;
   gap: 30px;
 
-  @media (max-width: 600px) {
+  @media (max-width: 768px) {
     display: none;
   }
 

@@ -148,7 +148,7 @@ const StarDiv = styled.div`
   top: 50%;
   left: 38%;
 
-  @media (max-width: 600px) {
+  @media (max-width: 768px) {
     display: none;
   }
 `;
@@ -190,7 +190,7 @@ const BodyRight = styled.div`
   padding: 100px;
   height: 100%;
 
-  @media (max-width: 600px) {
+  @media (max-width: 768px) {
     display: none;
   }
 `;

@@ -1,4 +1,4 @@
-// import styled from "styled-components";
+import styled from "styled-components";
 import Home from "./Home";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import ArtDetails from "./ArtDetails";
@@ -6,14 +6,14 @@ import Arts from "./components/Arts";
 
 function App() {
   return (
-    <div>
+    <Container>
       <Router>
         <Switch>
-          <Route  exact path="/arts/:id">
+          <Route exact path="/arts/:id">
             <ArtDetails />
           </Route>
 
-          <Route  exact path="/arts">
+          <Route exact path="/arts">
             <Arts />
           </Route>
 
@@ -22,10 +22,13 @@ function App() {
           </Route>
         </Switch>
       </Router>
-    </div>
+    </Container>
   );
 }
 
 export default App;
 
-// const Container = styled.div``;
+const Container = styled.div`
+  @media (max-width: 600px) {
+  }
+`;
