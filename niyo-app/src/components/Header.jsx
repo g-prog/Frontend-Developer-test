@@ -61,9 +61,12 @@ export default function Header({
             {menuOpen && (
               <MobileNav>
                 <NavContent>
-                  {/* <HamburgerDiv onClick={toggleDiv}>
-                    <img src="/assets/hamburger.png" alt="hamburger" />
-                  </HamburgerDiv> */}
+                  <CloseDiv onClick={toggleDiv}>
+                    <ImageWrapper>
+                      {" "}
+                      <img src="/assets/close.png" alt="close-icon" />
+                    </ImageWrapper>
+                  </CloseDiv>
                   <ul>
                     <li>Events</li>
                     <li>Museum</li>
@@ -111,6 +114,20 @@ const HamburgerDiv = styled.div`
   }
 `;
 
+const CloseDiv = styled.div`
+  display: none;
+
+  @media (max-width: 900px) {
+    display: flex;
+    justify-content: flex-end;
+    width: 140px;
+  }
+  img {
+    width: 20px;
+    height: 20px;
+  }
+`;
+
 const MobileNav = styled.div`
   display: none;
 
@@ -143,10 +160,11 @@ const Nav = styled.div`
 
 const LeftNav = styled.div``;
 
-const NavContent = styled.div`
+const ImageWrapper = styled.div``;
 
-padding: 70px;
-padding-left: 30px;
+const NavContent = styled.div`
+  padding: 70px;
+  padding-left: 30px;
 
   ul {
     display: flex;
