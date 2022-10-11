@@ -148,7 +148,8 @@ export default Arts;
 
 const Container = styled.div``;
 
-const CardsDiv = styled.div``;
+const CardsDiv = styled.div`
+`;
 
 const LoadingDiv = styled.div`
   display: flex;
@@ -166,6 +167,13 @@ const ArtsBody = styled.div`
   a {
     text-decoration: none;
     color: inherit;
+  }
+
+  @media (max-width: 400px) {
+    align-items: center;
+    justify-content: center;
+    padding: 10px 30px;
+    width: 500px;
   }
 `;
 
