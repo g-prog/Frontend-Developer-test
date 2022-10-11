@@ -132,7 +132,7 @@ const Nav = styled.div`
 
   @media (max-width: 600px) {
     padding: 10px;
-    gap: 50px;
+    justify-content: space-around;
   }
 `;
 
@@ -197,6 +197,10 @@ const BottomStack = styled.div`
 const RightNav = styled.div`
   display: flex;
   gap: 30px;
+
+  @media (max-width: 600px) {
+    display: none;
+  }
 
   ul {
     display: flex;
