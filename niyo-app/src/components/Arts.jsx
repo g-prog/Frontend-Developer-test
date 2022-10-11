@@ -225,6 +225,7 @@ const Content = styled.div`
   @media (max-width: 600px) {
     width: 100%;
     margin-top: 30px;
+    font-size: 12px;
   }
 
   @media (max-width: 900px) {
