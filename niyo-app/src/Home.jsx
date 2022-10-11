@@ -22,6 +22,10 @@ function Home() {
           <h1>
             Discover amazing <br /> art around the <span>world.</span>{" "}
           </h1>
+
+          <h2>
+            Discover amazing art around the <span>world.</span>{" "}
+          </h2>
           <TextContent>
             <p>
               Browse a curated selection of art around the world, including
@@ -77,9 +81,7 @@ function Home() {
 
 export default Home;
 
-const Container = styled.div`
-
-`;
+const Container = styled.div``;
 
 const Footer = styled.footer`
   display: flex;
@@ -196,14 +198,28 @@ const BodyRight = styled.div`
 const BodyLeft = styled.div`
   padding: 30px 0px;
 
+  @media (max-width: 600px) {
+    padding: 10px;
+  }
+
   h1 {
     font-weight: 700;
     font-size: 60px;
     color: #ffffff;
 
     @media (max-width: 600px) {
+      display: none;
+    }
+  }
+
+  h2 {
+    display: none;
+
+    @media (max-width: 600px) {
+      display: block;
       font-weight: 700;
-      font-size: 40px;
+      font-size: 30px;
+      color: #ffffff;
     }
   }
 
@@ -216,7 +232,7 @@ const TextContent = styled.div`
   width: 53%;
 
   @media (max-width: 600px) {
-    width: 85%;
+    width: 100%;
   }
 `;
 
