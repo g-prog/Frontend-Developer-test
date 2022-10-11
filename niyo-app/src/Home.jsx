@@ -77,7 +77,11 @@ function Home() {
 
 export default Home;
 
-const Container = styled.div``;
+const Container = styled.div`
+  @media (max-width: 600px) {
+    width: 600px;
+  }
+`;
 
 const Footer = styled.footer`
   display: flex;
