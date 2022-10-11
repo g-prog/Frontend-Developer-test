@@ -173,6 +173,10 @@ const Top = styled.div`
   display: flex;
   justify-content: space-between;
   padding: 10px 25px;
+
+  @media (max-width: 600px) {
+    flex-direction: column;
+  }
 `;
 
 const SearchDiv = styled.div`
@@ -195,6 +199,10 @@ const SearchDiv = styled.div`
       font-size: 15px;
     }
   }
+
+  @media (max-width: 600px) {
+    width: 100%;
+  }
 `;
 
 const Content = styled.div`
@@ -206,6 +214,10 @@ const Content = styled.div`
     line-height: 30px;
     letter-spacing: -0.01em;
     color: #ffffff;
+  }
+
+  @media (max-width: 600px) {
+    width: 100%;
   }
 `;
 

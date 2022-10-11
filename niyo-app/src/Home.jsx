@@ -168,7 +168,7 @@ const BodyLeft = styled.div`
 
     @media (max-width: 600px) {
       font-weight: 700;
-      font-size: 20px;
+      font-size: 40px;
     }
   }
 
@@ -179,6 +179,10 @@ const BodyLeft = styled.div`
 
 const TextContent = styled.div`
   width: 53%;
+
+  @media (max-width: 600px) {
+    width: 85%;
+  }
 `;
 
 const ExploreBottom = styled.div`
@@ -188,6 +192,10 @@ const ExploreBottom = styled.div`
   height: 20px;
   margin-top: 8px;
   padding: 20px 60px;
+
+  @media (max-width: 600px) {
+    padding: 20px 80px;
+  }
 `;
 
 const ExploreTop = styled.div`
