@@ -32,6 +32,7 @@ function Home() {
               museum exhibitions, gallery openings, upcoming and many more.
             </p>
           </TextContent>
+          
 
           <ExploreArtsContent>
             <ExploreTop>Explore Arts</ExploreTop>
@@ -172,6 +173,8 @@ const SpiralBottom = styled.div`
   }
 `;
 
+
+
 const GreekImage = styled.div`
   position: absolute;
   z-index: 10;
@@ -201,6 +204,7 @@ const BodyRight = styled.div`
 
 const BodyLeft = styled.div`
   padding: 30px 0px;
+  z-index: 0;
 
   @media (max-width: 600px) {
     padding: 10px;

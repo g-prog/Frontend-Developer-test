@@ -123,9 +123,9 @@ const MobileNav = styled.div`
     background: #fbaf00;
     position: absolute;
     top: 54px;
-    height: 100em;
+    height: 120em;
     z-index: 20;
-    width: 250px;
+    width: 200px;
     border-radius: 5px;
     right: 0;
   }
@@ -145,7 +145,8 @@ const LeftNav = styled.div``;
 
 const NavContent = styled.div`
 
-padding: 70px 40px;
+padding: 70px;
+padding-left: 30px;
 
   ul {
     display: flex;
