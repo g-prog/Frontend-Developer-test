@@ -61,16 +61,16 @@ export default function Header({
             {menuOpen && (
               <MobileNav>
                 <NavContent>
-                  <HamburgerDiv onClick={toggleDiv}>
+                  {/* <HamburgerDiv onClick={toggleDiv}>
                     <img src="/assets/hamburger.png" alt="hamburger" />
-                  </HamburgerDiv>
+                  </HamburgerDiv> */}
                   <ul>
                     <li>Events</li>
                     <li>Museum</li>
                     <li>Arts</li>
                     <li>Galleries</li>
                   </ul>
-                  <ButtonDiv>
+                  {/* <ButtonDiv>
                     <LoginButton>
                       <Topstack>Login</Topstack>
                       <BottomStack>hello</BottomStack>
@@ -80,7 +80,7 @@ export default function Header({
                       <ExploreTop>Explore Arts</ExploreTop>
                       <ExploreBottom>Hello</ExploreBottom>
                     </ExploreArts>
-                  </ButtonDiv>
+                  </ButtonDiv> */}
                 </NavContent>
               </MobileNav>
             )}
@@ -118,15 +118,15 @@ const MobileNav = styled.div`
     display: flex;
     flex-direction: column;
     gap: 20px;
-    align-items: center;
-    justify-content: center;
+    /* align-items: center;
+    justify-content: center; */
     background: #fbaf00;
     position: absolute;
-    top: 50px;
-    height: 700px;
+    top: 54px;
+    height: 100em;
     z-index: 20;
-    width: 150px;
-    border-radius: 10px;
+    width: 250px;
+    border-radius: 5px;
     right: 0;
   }
 `;
@@ -144,10 +144,15 @@ const Nav = styled.div`
 const LeftNav = styled.div``;
 
 const NavContent = styled.div`
+
+padding: 70px 40px;
+
   ul {
     display: flex;
     flex-direction: column;
-    gap: 60px;
+    /* align-items: center;
+    justify-content: center; */
+    gap: 90px;
     cursor: pointer;
   }
 
