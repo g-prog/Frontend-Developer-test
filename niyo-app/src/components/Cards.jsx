@@ -59,7 +59,7 @@ const ImageContainer = styled.div`
     }
 
     @media (max-width: 400px) {
-      width: 200px;
+      width: 250px;
       height: 200px;
     }
   }
