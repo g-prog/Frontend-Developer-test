@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import React from "react";
 import styled from "styled-components";
+import Logo from "./Icons/Logo";
 
 export default function Header({
   menuOpen,
@@ -28,7 +29,8 @@ export default function Header({
       <Nav>
         <LeftNav>
           <ImageContainer>
-            <img src="/assets/logo.png" alt="logo" />
+            <Logo />
+            {/* <img src="/assets/logo.png" alt="logo" /> */}
           </ImageContainer>
         </LeftNav>
 
