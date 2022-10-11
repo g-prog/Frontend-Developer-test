@@ -12,6 +12,8 @@ const ArtDetails = () => {
   const [baseUrl, setbaseUrl] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
+  const [openMenu, setopenMenu] = useState(false);
+  const [screenWidth, setscreenWidth] = useState(0);
 
   const { id } = useParams();
 
@@ -34,7 +36,12 @@ const ArtDetails = () => {
   console.log(artDetails?.artist_title);
   return (
     <Container>
-      <Header />
+      <Header
+        menuOpen={openMenu}
+        setMenuOpen={setopenMenu}
+        screenWidth={screenWidth}
+        setscreenWidth={setscreenWidth}
+      />
       <Top>
         <Div>
           <Link to="/">
@@ -144,6 +151,10 @@ const InfoTop = styled.div`
 const FlexDiv = styled.div`
   display: flex;
   gap: 40px;
+
+  @media (max-width: 600px) {
+    flex-direction: column;
+  }
 `;
 
 const ImageContainer = styled.div`
@@ -152,6 +163,11 @@ const ImageContainer = styled.div`
     height: 600px;
     border-radius: 20px 200px;
     transform: matrix(-1, 0, 0, 1, 0, 0);
+
+    @media (max-width: 400px) {
+      width: 200px;
+      height: 300px;
+    }
   }
 `;
 
@@ -174,4 +190,8 @@ const Div = styled.div`
 
 const Body = styled.div`
   padding: 20px 90px;
+
+  @media (max-width: 600px) {
+    padding: 20px;
+  }
 `;
