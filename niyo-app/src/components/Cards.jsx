@@ -36,6 +36,12 @@ const InfoDiv = styled.div`
     width: 300px;
     height: 200px;
   }
+
+
+  @media (max-width: 400px) {
+    width: 200px;
+    height: 100px;
+  }
 `;
 
 const ImageContainer = styled.div`
