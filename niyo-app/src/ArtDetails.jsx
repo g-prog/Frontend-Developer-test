@@ -182,6 +182,10 @@ const Top = styled.div`
   display: flex;
   justify-content: space-between;
   padding: 20px 60px;
+
+  @media (max-width: 600px) {
+    padding: 20px;
+  }
 `;
 
 const Div = styled.div`
