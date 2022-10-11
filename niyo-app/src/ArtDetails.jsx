@@ -164,7 +164,7 @@ const ImageContainer = styled.div`
     border-radius: 20px 200px;
     transform: matrix(-1, 0, 0, 1, 0, 0);
 
-    @media (max-width: 400px) {
+    @media (max-width: 600px) {
       width: 300px;
       height: 350px;
     }
