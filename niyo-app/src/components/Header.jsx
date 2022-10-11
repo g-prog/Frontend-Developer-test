@@ -91,6 +91,7 @@ export default function Header({
 
 const Container = styled.div`
   color: white;
+
   @media (max-width: 600px) {
     position: relative;
   }
@@ -98,6 +99,7 @@ const Container = styled.div`
 
 const HamburgerDiv = styled.div`
   display: none;
+
   @media (max-width: 900px) {
     display: flex;
   }
@@ -109,6 +111,7 @@ const HamburgerDiv = styled.div`
 
 const MobileNav = styled.div`
   display: none;
+
   @media (max-width: 900px) {
     display: flex;
     flex-direction: column;
@@ -131,7 +134,7 @@ const Nav = styled.div`
   padding: 30px;
 
   @media (max-width: 600px) {
-    padding: 0px;
+    padding: 5px;
   }
 `;
 
@@ -142,6 +145,7 @@ const NavContent = styled.div``;
 const ButtonDiv = styled.div`
   display: flex;
   gap: 20px;
+
   @media (max-width: 900px) {
     flex-direction: column;
   }
