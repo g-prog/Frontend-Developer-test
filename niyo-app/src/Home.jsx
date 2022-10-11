@@ -118,7 +118,7 @@ const Body = styled.div`
   padding: 10px 40px;
   position: relative;
 
-  @media (max-width: 600px) {
+  @media (max-width: 900px) {
     padding: 10px;
   }
 `;
@@ -215,7 +215,7 @@ const BodyLeft = styled.div`
     font-size: 60px;
     color: #ffffff;
 
-    @media (max-width: 600px) {
+    @media (max-width: 900px) {
       display: none;
     }
   }
@@ -223,7 +223,7 @@ const BodyLeft = styled.div`
   h2 {
     display: none;
 
-    @media (max-width: 600px) {
+    @media (max-width: 900px) {
       display: block;
       font-weight: 700;
       font-size: 25px;

@@ -32,13 +32,13 @@ const InfoDiv = styled.div`
   margin-top: -20px;
   font-size: 14px;
 
-  @media (max-width: 600px) {
+  /* @media (max-width: 900px) {
     width: 300px;
     height: 200px;
-  }
+  } */
 
 
-  @media (max-width: 400px) {
+  @media (max-width: 900px) {
     width: 200px;
     height: 200px;
   }
