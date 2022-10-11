@@ -173,7 +173,6 @@ const ArtsBody = styled.div`
     align-items: center;
     justify-content: center;
     padding: 10px 30px;
-    width: 500px;
   }
 `;
 

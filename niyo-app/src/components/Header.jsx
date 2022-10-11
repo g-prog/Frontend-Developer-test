@@ -10,30 +10,11 @@ export default function Header() {
             <img src="/assets/logo.png" alt="logo" />
           </ImageContainer>
         </LeftNav>
+
+        <HamburgerDiv>
+          <img src="/assets/hamburger.png" alt="hamburger" />
+        </HamburgerDiv>
         <RightNav>
-          <HamburgerDiv>
-            <img src="/assets/hamburger.png" alt="hamburger" />
-
-            <MobileNav>
-          <ul>
-            <li>Events</li>
-            <li>Museum</li>
-            <li>Arts</li>
-            <li>Galleries</li>
-          </ul>
-          <ButtonDiv>
-            <LoginButton>
-              <Topstack>Login</Topstack>
-              <BottomStack>hello</BottomStack>
-            </LoginButton>
-
-            <ExploreArts>
-              <ExploreTop>Explore Arts</ExploreTop>
-              <ExploreBottom>Hello</ExploreBottom>
-            </ExploreArts>
-          </ButtonDiv>
-        </MobileNav>
-          </HamburgerDiv>
           <ul>
             <li>Events</li>
             <li>Museum</li>
@@ -52,7 +33,26 @@ export default function Header() {
             </ExploreArts>
           </ButtonDiv>
         </RightNav>
-        
+
+        <MobileNav>
+          <ul>
+            <li>Events</li>
+            <li>Museum</li>
+            <li>Arts</li>
+            <li>Galleries</li>
+          </ul>
+          <ButtonDiv>
+            <LoginButton>
+              <Topstack>Login</Topstack>
+              <BottomStack>hello</BottomStack>
+            </LoginButton>
+
+            <ExploreArts>
+              <ExploreTop>Explore Arts</ExploreTop>
+              <ExploreBottom>Hello</ExploreBottom>
+            </ExploreArts>
+          </ButtonDiv>
+        </MobileNav>
       </Nav>
     </Container>
   );
