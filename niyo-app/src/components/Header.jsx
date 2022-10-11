@@ -58,6 +58,7 @@ export default function Header({
           <>
             {menuOpen && (
               <MobileNav>
+                <NavContent>
                 <ul>
                   <li>Events</li>
                   <li>Museum</li>
@@ -75,6 +76,9 @@ export default function Header({
                     <ExploreBottom>Hello</ExploreBottom>
                   </ExploreArts>
                 </ButtonDiv>
+
+                </NavContent>
+                
               </MobileNav>
             )}
           </>
@@ -108,10 +112,15 @@ const MobileNav = styled.div`
     display: flex;
     flex-direction: column;
     gap: 20px;
+    align-items: center;
+    justify-content: center;
     background: #fbaf00;
     position: absolute;
     top: 0;
     height: 100vh;
+    z-index: 20;
+    width: 600px;
+    left: 0;
   }
 `;
 
@@ -122,6 +131,9 @@ const Nav = styled.div`
 `;
 
 const LeftNav = styled.div``;
+
+
+const NavContent = styled.div``;
 
 const ButtonDiv = styled.div`
   display: flex;
