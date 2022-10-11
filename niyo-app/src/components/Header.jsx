@@ -150,8 +150,8 @@ padding: 70px 40px;
   ul {
     display: flex;
     flex-direction: column;
-    /* align-items: center;
-    justify-content: center; */
+    align-items: center;
+    justify-content: center;
     gap: 90px;
     cursor: pointer;
   }

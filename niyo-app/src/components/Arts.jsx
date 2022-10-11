@@ -206,8 +206,8 @@ const SearchDiv = styled.div`
     }
   }
 
-  @media (max-width: 768px) {
-    width: 100%;
+  @media (max-width: 900px) {
+    width: 300px;
   }
 `;
 
