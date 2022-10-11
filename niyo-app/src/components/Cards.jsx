@@ -39,7 +39,7 @@ const InfoDiv = styled.div`
 
 
   @media (max-width: 400px) {
-    width: 200px;
+    width: 100px;
     height: 200px;
   }
 `;
