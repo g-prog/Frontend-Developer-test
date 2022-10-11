@@ -226,7 +226,7 @@ const BodyLeft = styled.div`
     @media (max-width: 600px) {
       display: block;
       font-weight: 700;
-      font-size: 16px;
+      font-size: 25px;
       color: #ffffff;
     }
   }
