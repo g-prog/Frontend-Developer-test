@@ -207,7 +207,7 @@ const SearchDiv = styled.div`
   }
 
   @media (max-width: 900px) {
-    width: 300px;
+    width: 250px;
   }
 `;
 
