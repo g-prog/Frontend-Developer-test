@@ -298,4 +298,8 @@ const ExploreArtsContent = styled.div`
   cursor: pointer;
   padding: 20px 10px;
   width: 23%;
+
+  @media (max-width: 600px) {
+    margin-top: 40px;
+  }
 `;
