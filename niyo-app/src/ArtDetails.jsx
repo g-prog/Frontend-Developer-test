@@ -165,8 +165,8 @@ const ImageContainer = styled.div`
     transform: matrix(-1, 0, 0, 1, 0, 0);
 
     @media (max-width: 400px) {
-      width: 200px;
-      height: 300px;
+      width: 300px;
+      height: 350px;
     }
   }
 `;
