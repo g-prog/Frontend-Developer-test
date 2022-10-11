@@ -39,7 +39,7 @@ const InfoDiv = styled.div`
 
 
   @media (max-width: 400px) {
-    width: 100px;
+    width: 200px;
     height: 200px;
   }
 `;
@@ -54,7 +54,7 @@ const ImageContainer = styled.div`
     border-radius: 0px 180px 0px 0px;
 
     @media (max-width: 600px) {
-      width: 360px;
+      width: 200px;
       height: 200px;
     }
   }
