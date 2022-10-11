@@ -171,7 +171,7 @@ const ArtsBody = styled.div`
   @media (max-width: 900px) {
     align-items: center;
     justify-content: center;
-    padding: 10px 30px;
+    padding: 40px 30px;
   }
 `;
 
@@ -220,6 +220,11 @@ const Content = styled.div`
     line-height: 30px;
     letter-spacing: -0.01em;
     color: #ffffff;
+
+    @media (max-width: 600px) {
+    font-size: 16px;
+    text-align: justify;
+  }
   }
 
   @media (max-width: 600px) {

@@ -241,6 +241,7 @@ const TextContent = styled.div`
 
   @media (max-width: 600px) {
     width: 100%;
+    text-align: justify;
   }
 `;
 
