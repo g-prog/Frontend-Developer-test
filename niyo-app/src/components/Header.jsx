@@ -59,26 +59,27 @@ export default function Header({
             {menuOpen && (
               <MobileNav>
                 <NavContent>
-                <ul>
-                  <li>Events</li>
-                  <li>Museum</li>
-                  <li>Arts</li>
-                  <li>Galleries</li>
-                </ul>
-                <ButtonDiv>
-                  <LoginButton>
-                    <Topstack>Login</Topstack>
-                    <BottomStack>hello</BottomStack>
-                  </LoginButton>
+                  <HamburgerDiv onClick={toggleDiv}>
+                    <img src="/assets/hamburger.png" alt="hamburger" />
+                  </HamburgerDiv>
+                  <ul>
+                    <li>Events</li>
+                    <li>Museum</li>
+                    <li>Arts</li>
+                    <li>Galleries</li>
+                  </ul>
+                  <ButtonDiv>
+                    <LoginButton>
+                      <Topstack>Login</Topstack>
+                      <BottomStack>hello</BottomStack>
+                    </LoginButton>
 
-                  <ExploreArts>
-                    <ExploreTop>Explore Arts</ExploreTop>
-                    <ExploreBottom>Hello</ExploreBottom>
-                  </ExploreArts>
-                </ButtonDiv>
-
+                    <ExploreArts>
+                      <ExploreTop>Explore Arts</ExploreTop>
+                      <ExploreBottom>Hello</ExploreBottom>
+                    </ExploreArts>
+                  </ButtonDiv>
                 </NavContent>
-                
               </MobileNav>
             )}
           </>
@@ -128,10 +129,14 @@ const Nav = styled.div`
   display: flex;
   justify-content: space-between;
   padding: 30px;
+
+  @media (max-width: 600px) {
+    padding: 10px;
+    gap: 50px;
+  }
 `;
 
 const LeftNav = styled.div``;
-
 
 const NavContent = styled.div``;
 
