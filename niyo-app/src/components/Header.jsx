@@ -136,7 +136,7 @@ const Nav = styled.div`
   padding: 30px;
 
   @media (max-width: 600px) {
-    padding: 5px;
+    padding: 10px;
   }
 `;
 
@@ -224,4 +224,8 @@ const RightNav = styled.div`
   }
 `;
 
-const ImageContainer = styled.div``;
+const ImageContainer = styled.div`
+  @media (max-width: 600px) {
+    margin-top: 8px;
+  }
+`;
