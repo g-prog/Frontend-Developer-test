@@ -125,7 +125,8 @@ const MobileNav = styled.div`
     top: 50px;
     height: 700px;
     z-index: 20;
-    width: 200px;
+    width: 150px;
+    border-radius: 10px;
     right: 0;
   }
 `;
@@ -142,14 +143,28 @@ const Nav = styled.div`
 
 const LeftNav = styled.div``;
 
-const NavContent = styled.div``;
+const NavContent = styled.div`
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    cursor: pointer;
+  }
+
+  li {
+    list-style-type: none;
+    font-weight: 600;
+    font-size: 16px;
+    color: #ffffff;
+  }
+`;
 
 const ButtonDiv = styled.div`
   display: flex;
   gap: 20px;
 
   @media (max-width: 900px) {
-    flex-direction: column;
+    display: none;
   }
 `;
 
