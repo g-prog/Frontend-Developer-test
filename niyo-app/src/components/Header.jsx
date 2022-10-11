@@ -60,13 +60,13 @@ export default function Header({
           <>
             {menuOpen && (
               <MobileNav>
+                <CloseDiv onClick={toggleDiv}>
+                  <ImageWrapper>
+                    {" "}
+                    <img src="/assets/close.png" alt="close-icon" />
+                  </ImageWrapper>
+                </CloseDiv>
                 <NavContent>
-                  <CloseDiv onClick={toggleDiv}>
-                    <ImageWrapper>
-                      {" "}
-                      <img src="/assets/close.png" alt="close-icon" />
-                    </ImageWrapper>
-                  </CloseDiv>
                   <ul>
                     <li>Events</li>
                     <li>Museum</li>
@@ -120,7 +120,8 @@ const CloseDiv = styled.div`
   @media (max-width: 900px) {
     display: flex;
     justify-content: flex-end;
-    width: 140px;
+    width: 180px;
+    padding: 10px 5px;
   }
   img {
     width: 10px;
