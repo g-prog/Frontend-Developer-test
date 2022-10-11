@@ -105,6 +105,10 @@ const StackContainer = styled.div`
   position: absolute;
   top: 5%;
   left: 60%;
+
+  @media (max-width: 600px) {
+    display: none;
+  }
 `;
 
 const Body = styled.div`
@@ -122,6 +126,10 @@ const BackgroundDiv = styled.div`
   padding: 20px 30px;
   z-index: 0;
   margin-top: 20px;
+
+  @media (max-width: 600px) {
+    display: none;
+  }
 `;
 
 const SpiralLogoDiv = styled.div`
@@ -129,6 +137,10 @@ const SpiralLogoDiv = styled.div`
   z-index: 30;
   top: 20px;
   left: -60px;
+
+  @media (max-width: 600px) {
+    display: none;
+  }
 `;
 
 const StarDiv = styled.div`
@@ -145,6 +157,14 @@ const SpiralBottom = styled.div`
   img {
     width: 450px;
     height: 800px;
+
+    @media (max-width: 600px) {
+      display: none;
+    }
+  }
+
+  @media (max-width: 600px) {
+    display: none;
   }
 `;
 
@@ -154,10 +174,15 @@ const GreekImage = styled.div`
   top: 0;
   width: 100%;
   height: 100%;
+
   img {
     width: 450px;
     height: 600px;
     border-radius: 20px 200px;
+  }
+
+  @media (max-width: 600px) {
+    display: none;
   }
 `;
 
