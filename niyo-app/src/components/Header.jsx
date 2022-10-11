@@ -19,7 +19,7 @@ export default function Header({
     return () => {
       window.removeEventListener("resize", changeWidth);
     };
-  }, []);
+  }, [setscreenWidth]);
 
   const toggleDiv = () => {
     setMenuOpen(!menuOpen);

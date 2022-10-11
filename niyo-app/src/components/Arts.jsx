@@ -209,6 +209,7 @@ const SearchDiv = styled.div`
   @media (max-width: 900px) {
     width: 250px;
   }
+
 `;
 
 const Content = styled.div`
@@ -221,13 +222,13 @@ const Content = styled.div`
     letter-spacing: -0.01em;
     color: #ffffff;
 
-    @media (max-width: 600px) {
+    @media (max-width: 900px) {
     font-size: 16px;
     text-align: justify;
   }
   }
 
-  @media (max-width: 600px) {
+  @media (max-width: 900px) {
     width: 100%;
     margin-top: 30px;
     font-size: 12px;
@@ -245,7 +246,7 @@ const TopLeft = styled.div`
     font-size: 48px;
     color: #ffffff;
 
-    @media (max-width: 600px) {
+    @media (max-width: 900px) {
       font-weight: 700;
       font-size: 28px;
     }

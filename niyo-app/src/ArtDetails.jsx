@@ -152,7 +152,7 @@ const FlexDiv = styled.div`
   display: flex;
   gap: 40px;
 
-  @media (max-width: 600px) {
+  @media (max-width: 900px) {
     flex-direction: column;
   }
 `;
@@ -164,7 +164,7 @@ const ImageContainer = styled.div`
     border-radius: 20px 200px;
     transform: matrix(-1, 0, 0, 1, 0, 0);
 
-    @media (max-width: 600px) {
+    @media (max-width: 900px) {
       width: 300px;
       height: 350px;
     }
