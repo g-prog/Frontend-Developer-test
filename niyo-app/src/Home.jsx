@@ -6,6 +6,7 @@ import SpiralLogo from "./components/Icons/SpiralLogo";
 import Arts from "./components/Arts";
 import ArrowIcon from "./components/Icons/ArrowIcon";
 
+
 function Home() {
   const [openMenu, setopenMenu] = useState(false);
   const [screenWidth, setscreenWidth] = useState(0);

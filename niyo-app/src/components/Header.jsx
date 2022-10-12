@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import React from "react";
 import styled from "styled-components";
 import Logo from "./Icons/Logo";
+import { Link } from "react-router-dom";
 
 export default function Header({
   menuOpen,
@@ -39,10 +40,20 @@ export default function Header({
         </HamburgerDiv>
         <RightNav>
           <ul>
-            <li>Events</li>
-            <li>Museum</li>
-            <li>Arts</li>
-            <li>Galleries</li>
+            <Link to="/">
+              {" "}
+              <li>Events</li>
+            </Link>
+            <Link to="">
+              {" "}
+              <li>Museum</li>
+            </Link>
+            <Link to="/">
+              <li>Arts</li>
+            </Link>
+            <Link to="/">
+              <li>Galleries</li>
+            </Link>
           </ul>
           <ButtonDiv>
             <LoginButton>
@@ -68,10 +79,20 @@ export default function Header({
                 </CloseDiv>
                 <NavContent>
                   <ul>
-                    <li>Events</li>
-                    <li>Museum</li>
-                    <li>Arts</li>
-                    <li>Galleries</li>
+                    <Link to="/">
+                      {" "}
+                      <li>Events</li>
+                    </Link>
+                    <Link to="">
+                      {" "}
+                      <li>Museum</li>
+                    </Link>
+                    <Link to="/">
+                      <li>Arts</li>
+                    </Link>
+                    <Link to="/">
+                      <li>Galleries</li>
+                    </Link>
                   </ul>
                   {/* <ButtonDiv>
                     <LoginButton>
@@ -182,11 +203,21 @@ const NavContent = styled.div`
     font-size: 16px;
     color: #ffffff;
   }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
 `;
 
 const ButtonDiv = styled.div`
   display: flex;
   gap: 20px;
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
 
   @media (max-width: 900px) {
     display: none;
@@ -261,6 +292,12 @@ const RightNav = styled.div`
     font-weight: 600;
     font-size: 16px;
     color: #ffffff;
+    text-decoration: none;
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
   }
 `;
 
