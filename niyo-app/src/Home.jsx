@@ -156,7 +156,7 @@ const StarDiv = styled.div`
   top: 50%;
   left: 38%;
 
-  @media (max-width: 768px) {
+  @media (max-width: 900px) {
     display: none;
   }
 `;
@@ -216,7 +216,7 @@ const BodyLeft = styled.div`
     font-size: 60px;
     color: #ffffff;
 
-    @media (max-width: 900px) {
+    @media (max-width: 1200px) {
       display: none;
     }
   }
@@ -224,7 +224,7 @@ const BodyLeft = styled.div`
   h2 {
     display: none;
 
-    @media (max-width: 900px) {
+    @media (max-width: 1200px) {
       display: block;
       font-weight: 700;
       font-size: 25px;
@@ -240,7 +240,7 @@ const BodyLeft = styled.div`
 const TextContent = styled.div`
   width: 53%;
 
-  @media (max-width: 900px) {
+  @media (max-width: 1300px) {
     width: 100%;
     text-align: justify;
     line-height: 30px;

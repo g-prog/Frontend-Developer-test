@@ -206,7 +206,7 @@ const SearchDiv = styled.div`
     }
   }
 
-  @media (max-width: 900px) {
+  @media (max-width: 600px) {
     width: 250px;
   }
 
