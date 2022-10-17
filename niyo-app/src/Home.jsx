@@ -198,7 +198,7 @@ const BodyRight = styled.div`
   padding: 100px;
   height: 100%;
 
-  @media (max-width: 768px) {
+  @media (max-width: 900px) {
     display: none;
   }
 `;
@@ -294,6 +294,10 @@ const ExploreTopFooter = styled.div`
   color: #251a00;
   position: absolute;
   /* height: 20px; */
+
+  @media (max-width: 600px) {
+    font-size: 10px;
+  }
 `;
 
 const ExploreArtsContent = styled.div`

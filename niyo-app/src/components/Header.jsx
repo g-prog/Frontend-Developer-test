@@ -175,7 +175,7 @@ const Nav = styled.div`
   justify-content: space-between;
   padding: 30px;
 
-  @media (max-width: 600px) {
+  @media (max-width: 900px) {
     padding: 10px;
   }
 `;
