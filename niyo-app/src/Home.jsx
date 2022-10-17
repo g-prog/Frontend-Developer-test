@@ -6,7 +6,6 @@ import SpiralLogo from "./components/Icons/SpiralLogo";
 import Arts from "./components/Arts";
 import ArrowIcon from "./components/Icons/ArrowIcon";
 
-
 function Home() {
   const [openMenu, setopenMenu] = useState(false);
   const [screenWidth, setscreenWidth] = useState(0);
@@ -33,7 +32,6 @@ function Home() {
               museum exhibitions, gallery openings, upcoming and many more.
             </p>
           </TextContent>
-          
 
           <ExploreArtsContent>
             <ExploreTop>Explore Arts</ExploreTop>
@@ -91,7 +89,11 @@ const Footer = styled.footer`
   position: relative;
 `;
 
-const FooterImage = styled.div``;
+const FooterImage = styled.div`
+  @media (max-width: 768px) {
+    display: none;
+  }
+`;
 
 const ExploreDiv = styled.div`
   display: flex;
@@ -173,8 +175,6 @@ const SpiralBottom = styled.div`
     display: none;
   }
 `;
-
-
 
 const GreekImage = styled.div`
   position: absolute;
