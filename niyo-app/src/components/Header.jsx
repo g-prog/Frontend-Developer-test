@@ -274,7 +274,7 @@ const RightNav = styled.div`
   display: flex;
   gap: 30px;
 
-  @media (max-width: 768px) {
+  @media (max-width: 900px) {
     display: none;
   }
 
@@ -282,7 +282,7 @@ const RightNav = styled.div`
     display: flex;
     gap: 60px;
     cursor: pointer;
-    @media (max-width: 600px) {
+    @media (max-width: 900px) {
       display: none;
     }
   }
